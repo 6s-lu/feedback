@@ -1,0 +1,63 @@
+name: Feature request
+description: Something is missing, or harder than it should be
+title: "[Feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The most useful requests describe **the problem**, not the solution.
+        If we understand what you are actually trying to get done, we can often
+        find a better answer than the one either of us thought of first.
+
+        This issue will be public and permanent.
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - 4S
+        - 5S
+        - BEWEEG
+        - MENGNOPER
+        - STAMORA
+        - THABLES
+        - SCANGRID
+        - MENGPLANG
+        - BROUILLON
+        - AKAFEN
+        - BLACK TULIP (blacktulip.lu)
+        - Something else / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task, not the feature. "I get CSVs from my bank with semicolons and have to fix them in a text editor first."
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you handle it today?
+      description: Including "I gave up" — that is genuinely useful to know.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you had in mind, if you have something in mind
+    validations:
+      required: false
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this come up for you?
+      options:
+        - Every time I use it
+        - Weekly
+        - Occasionally
+        - Once, but it mattered
+    validations:
+      required: false

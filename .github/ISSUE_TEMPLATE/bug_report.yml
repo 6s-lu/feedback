@@ -1,0 +1,87 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue will be public and permanent.** Please leave out passwords,
+        recovery codes, payment details, personal addresses — and anything about
+        your health, your prescription or your treatment. If it does not belong
+        in public, write to hello@6s.lu instead.
+
+        Found a security vulnerability? Do not file it here — see
+        [SECURITY.md](../blob/main/SECURITY.md).
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - 4S
+        - 5S
+        - BEWEEG
+        - MENGNOPER
+        - STAMORA
+        - THABLES
+        - SCANGRID
+        - MENGPLANG
+        - BROUILLON
+        - AKAFEN
+        - BLACK TULIP (blacktulip.lu)
+        - Something else / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: In the app, usually under Settings → About. If you cannot find it, write "unknown".
+      placeholder: "1.0.2"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Device and OS
+      placeholder: "iPhone 14, iOS 18.2 — or MacBook Air M2, macOS 15.1 — or Chrome 131 on Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: In order, starting from opening the app. This is the part that decides whether it can be fixed.
+      placeholder: |
+        1. Open the app
+        2. Import a CSV with a semicolon delimiter
+        3. Tap Export → Excel
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected to happen
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: The exact message if there was one, word for word.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: Drag images in here. Please blank out anything personal first.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you send
+      options:
+        - label: This report contains no passwords, payment details or health information.
+          required: true

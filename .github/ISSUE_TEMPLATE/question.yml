@@ -1,0 +1,45 @@
+name: Question
+description: How do I…? Does it…? Is it supposed to…?
+title: "[Question] "
+labels: ["question", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask away. If the answer turns out to be "it cannot do that yet", we will
+        relabel this as a feature request rather than closing it.
+
+        This issue will be public and permanent — please keep personal details,
+        account information and anything about your health out of it. For those,
+        write to hello@6s.lu.
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - 4S
+        - 5S
+        - BEWEEG
+        - MENGNOPER
+        - STAMORA
+        - THABLES
+        - SCANGRID
+        - MENGPLANG
+        - BROUILLON
+        - AKAFEN
+        - BLACK TULIP (blacktulip.lu)
+        - Something else / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you have already tried
+    validations:
+      required: false

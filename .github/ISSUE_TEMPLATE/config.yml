@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Anything private — account, payment, or health
+    url: mailto:hello@6s.lu
+    about: Issues here are public and permanent. Write to us directly instead; nothing is lost by doing that.
+  - name: Security vulnerability
+    url: mailto:hello@6s.lu
+    about: Never report a vulnerability in a public issue. Email hello@6s.lu with SECURITY in the subject.
+  - name: 6S — the products
+    url: https://6s.lu
+    about: What each product is, and where it has got to.
